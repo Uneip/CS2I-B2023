@@ -1,6 +1,0 @@
-evan:$apr1$WIUVmwyW$z/aXCHERfmi30.ijaHxKa/
-
-AuthType Basic
-AuthName "Accès protégé"
-AuthUserFile /usr/home/login/www/.htpasswd
-require valid-user
