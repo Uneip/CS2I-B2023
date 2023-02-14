@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Accès Protégé"
-AuthUserFile /var/www/victor/CS2I-B2023/Victor/wordpress/wp-admin/.htpasswd
-require valid-user
