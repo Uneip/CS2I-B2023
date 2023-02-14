@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Accès protégé"
+AuthUserFile /var/.htpasswd
+require valid-user
+
