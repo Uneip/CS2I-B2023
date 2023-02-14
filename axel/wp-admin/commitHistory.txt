@@ -1,0 +1,29 @@
+commit 55f5e111e980e47135e57fcbd9e6298ce6747164
+Author: IzawGithub <125356732+IzawGithub@users.noreply.github.com>
+Date:   Tue Feb 14 15:44:39 2023 +0100
+
+    Added .htaccess
+
+commit 854cebb1f919660ce013a35d28feb55d4c01c212
+Author: IzawGithub <125356732+IzawGithub@users.noreply.github.com>
+Date:   Tue Feb 14 14:40:14 2023 +0100
+
+    Added WP
+
+commit 0de54fc740a6730d2168e8fafb0c6d340872fd7b
+Author: IzawGithub <125356732+IzawGithub@users.noreply.github.com>
+Date:   Tue Feb 14 13:46:50 2023 +0100
+
+    Added test.txt
+
+commit 7510cf9bd5da8f74099d47a205ac50b8b50ec5af
+Author: Uneip <55940964+Uneip@users.noreply.github.com>
+Date:   Tue Feb 14 11:03:10 2023 +0100
+
+    Create toto.txt
+
+commit dc1bb7f45362eaf61419a282c660f84f09a06804
+Author: Uneip <55940964+Uneip@users.noreply.github.com>
+Date:   Tue Feb 14 10:50:48 2023 +0100
+
+    Initial commit
