@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Accès protégé"
+AuthUserFile /var/www/html/Romain/CS2I-B2023/.htpasswd
+require valid-user
