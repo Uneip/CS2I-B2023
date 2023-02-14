@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TP Git</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TP Git :: TP4 Symfony EasyAdmin</title>
+    <meta name="generator" content="Antora 3.1.0">
+    <link rel="stylesheet" href="../_/css/dark.css">
+    <link rel="stylesheet" href="../_/js/vendor/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../_/css/font-awesome.css">
+    <meta name="generator" content="Antora v3.1.0">
+    <script>var uiRootPath = '../_'</script>
+</head>
+<body class="article">
+    
+    <div id="header">
+        <h1>TP Git</h1>
+        <div class="details">
+            <span id="author" class="author">Axel SABATINI</span>
+            <span id="email" class="email">
+                <a href="mailto:"></a>
+            </span>
+        </div>
+    </div>
+<div id="content">
+  <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_question">Question</a></li>
+<li><a href="#_exercice_1">Exercice 1</a></li>
+<li><a href="#_exercice_2">Exercice 2</a></li>
+<li><a href="#_exercice_3">Exercice 3</a></li>
+<li><a href="#_exercice_4">Exercice 4</a></li>
+<li><a href="#_exercice_5">Exercice 5</a></li>
+<li><a href="#_exercice_6">Exercice 6</a></li>
+<li><a href="#_exercice_7">Exercice 7</a></li>
+<li><a href="#_résultat">Résultat</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_question"><a class="anchor" href="#_question"></a>Question</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="_attachments/Exercice.pdf" class="xref attachment">Lien vers le PDF avec question</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_1"><a class="anchor" href="#_exercice_1"></a>Exercice 1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour cloner la branche apartenant à notre prénom, on utilise la commande git suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git clone brancheACloner git@github.com:Uneip/CS2I-B2023.git</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_2"><a class="anchor" href="#_exercice_2"></a>Exercice 2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour récupérer et installer la dernière version de Wordpress, on utilise les commandes Linux suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ wget https://wordpress.org/latest.tar.gz
+--2023-02-14 12:00:00--  https://wordpress.org/latest.tar.gz
+Resolving wordpress.org (wordpress.org)... 198.143.164.252
+Connecting to wordpress.org (wordpress.org)|198.143.164.252|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 22751086 (22M) [application/octet-stream]
+Saving to: ‘latest.tar.gz’
+
+latest.tar.gz                100%[==============================================&gt;]  21,70M  14,3MB/s    in 1,5s
+
+2023-02-14 12:00:01 (14,3 MB/s) - ‘latest.tar.gz’ saved [22751086/22751086]
+$ tar -xzf latest.tar.gz
+$ ls
+wordpress</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_3"><a class="anchor" href="#_exercice_3"></a>Exercice 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On configure Wordpress via un navigateur, puis effectuons la commande suivante pour empécher Git de mettre à jour le fichier.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo "wp-config.php" &gt; .gitignore</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On mets à jour le répo avec les fichiers grâce aux commandes Git suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git add *
+$ git commit</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_4"><a class="anchor" href="#_exercice_4"></a>Exercice 4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On créer un fichier .htaccess que l&#8217;on rajoute à notre Wordpress avec la commande suivante :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ echo "AuthType Basic
+AuthName \"Accès protégé\"
+AuthUserFile /usr/home/login/www/.htpasswd
+require valid-user" &gt; .htaccess</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_5"><a class="anchor" href="#_exercice_5"></a>Exercice 5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On créer un historique de nos commit effectuer grâce à cette commande :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git log &gt; commitHistory.txt</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_6"><a class="anchor" href="#_exercice_6"></a>Exercice 6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On retourne dans le passée de la branche grâce à cette commande Git :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git checkout 854cebb1f919660ce013a35d28feb55d4c01c212</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercice_7"><a class="anchor" href="#_exercice_7"></a>Exercice 7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On fusionne notre branche et on la mets dans Github grâce aux commandes Git suivantes :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git checkout main
+$ git pull
+$ git cherry-pick 854cebb1f919660ce013a35d28feb55d4c01c212
+$ git push</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_résultat"><a class="anchor" href="#_résultat"></a>Résultat</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/Github.png" alt="image$Github">
+</div>
+<div class="title">Figure 1. Github</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+    <span id="last-updated">Last updated </span>
+    <span id="copyright"></span>
+</div>
+<script src="../_/js/vendor/highlight.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

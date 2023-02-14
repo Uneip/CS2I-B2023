@@ -1,0 +1,117 @@
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url(./fonts.css);
+@import url(./default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+:root{
+  font-variant-ligatures: none;
+--maincolor:#282c34;
+--primarycolor:#e06c75;
+--secondarycolor:#d19a66;
+--tertiarycolor:#98c379;
+--sidebarbackground:#21252b;
+--linkcolor:#61aeee;
+--linkcoloralternate:#5499d1;
+--white:#FFFFFF;
+}
+
+/* Text styles */
+
+body{font-family: "Noto Sans",sans-serif;background-color: var(--maincolor);color:var(--white);}
+
+h1{color:var(--primarycolor) !important;font-family:"Noto Sans",sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Noto Sans",sans-serif;}
+.title{color:var(--white) !important;font-family:"Noto Sans",sans-serif;font-style: normal; font-weight: normal;}
+p{color: #abb2bf !important; font-family: "Noto Sans",sans-serif !important}
+#toc.toc2 a:link{color:var(--linkcolor);}
+blockquote{color:var(--tertiarycolor) !important}
+.quoteblock{color:var(--white)}
+code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+
+
+/* Table styles */
+th{background-color: var(--maincolor);color:var(--white) !important;}
+td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
+
+
+#toc.toc2{background-color:var(--sidebarbackground);}
+#toctitle{color:#e8e6e3;}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  table {
+    font-size: 3vw;
+  }
+}
+
+.exampleblock > .content {
+  background-color: var(--maincolor);
+}
+
+a, #header .details span.email a {
+  color: var(--linkcolor);
+}
+
+a:hover, a:focus {
+  color: var(--linkcoloralternate);
+}
+
+.admonitionblock td.icon .icon-important::before, .admonitionblock.important td.content {
+  color: var(--primarycolor) !important;
+}
+.admonitionblock td.icon .icon-warning::before, .admonitionblock.warning td.content  {
+  color: var(--secondarycolor) !important;
+}
+.admonitionblock td.icon .icon-caution::before, .admonitionblock.caution td.content  {
+  color: #c678dd !important;
+}
+.admonitionblock td.icon .icon-note::before, .admonitionblock.note td.content  {
+  color: var(--tertiarycolor) !important;
+}
+.admonitionblock td.icon .icon-tip::before, .admonitionblock.tip td.content  {
+  text-shadow: none;
+  color: var(--white) !important;
+}
+
+#preamble > .sectionbody > .paragraph:first-of-type p {
+  color: var(--white);
+}
+
+.quoteblock blockquote::before {
+  color: var(--primarycolor);
+}
+.quoteblock .attribution cite, .verseblock .attribution cite {
+  color: var(--white);
+}
+.verseblock pre {
+  color: var(--white);
+}
+.quoteblock blockquote, .quoteblock blockquote p {
+  color: var(--white);
+}
+
+.sidebarblock {
+  background: var(--sidebarbackground);
+}
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+  background: var(--sidebarbackground);
+  color: var(--white);
+}
+
+#header .details {
+  color: var(--white);
+}
+
+#last-updated {
+  float: left;
+}
+
+#copyright {
+  float: right;
+}
