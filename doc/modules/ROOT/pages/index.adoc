@@ -1,0 +1,101 @@
+= TP Git
+:toc:
+
+== Question
+
+xref:attachment$Exercice.pdf[Lien vers le PDF avec question]
+
+== Exercice 1
+
+Pour cloner la branche apartenant à notre prénom, on utilise la commande git suivante :
+
+[source,bash]
+----
+$ git clone brancheACloner git@github.com:Uneip/CS2I-B2023.git
+----
+
+== Exercice 2
+
+Pour récupérer et installer la dernière version de Wordpress, on utilise les commandes Linux suivantes : 
+
+[source,bash]
+----
+$ wget https://wordpress.org/latest.tar.gz
+--2023-02-14 12:00:00--  https://wordpress.org/latest.tar.gz
+Resolving wordpress.org (wordpress.org)... 198.143.164.252
+Connecting to wordpress.org (wordpress.org)|198.143.164.252|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 22751086 (22M) [application/octet-stream]
+Saving to: ‘latest.tar.gz’
+
+latest.tar.gz                100%[==============================================>]  21,70M  14,3MB/s    in 1,5s    
+
+2023-02-14 12:00:01 (14,3 MB/s) - ‘latest.tar.gz’ saved [22751086/22751086]
+$ tar -xzf latest.tar.gz
+$ ls
+wordpress
+----
+
+== Exercice 3
+
+On configure Wordpress via un navigateur, puis effectuons la commande suivante pour empécher Git de mettre à jour le fichier.
+
+[source,bash]
+----
+$ echo "wp-config.php" > .gitignore
+----
+
+On mets à jour le répo avec les fichiers grâce aux commandes Git suivantes :
+
+[source,bash]
+----
+$ git add *
+$ git commit
+----
+
+== Exercice 4 
+
+On créer un fichier .htaccess que l'on rajoute à notre Wordpress avec la commande suivante :
+
+[source,bash]
+----
+$ echo "AuthType Basic
+AuthName \"Accès protégé\"
+AuthUserFile /usr/home/login/www/.htpasswd
+require valid-user" > .htaccess
+----
+
+== Exercice 5
+
+On créer un historique de nos commit effectuer grâce à cette commande :
+
+[source,bash]
+----
+$ git log > commitHistory.txt
+----
+
+== Exercice 6
+
+On retourne dans le passée de la branche grâce à cette commande Git :
+
+[source,bash]
+----
+$ git checkout 854cebb1f919660ce013a35d28feb55d4c01c212
+----
+
+== Exercice 7
+
+On fusionne notre branche et on la mets dans Github grâce aux commandes Git suivantes :
+
+[source,bash]
+----
+$ git checkout main
+$ git pull
+$ git cherry-pick 854cebb1f919660ce013a35d28feb55d4c01c212
+$ git push
+----
+
+== Résultat
+
+.Github
+image::image$Github.png[]
