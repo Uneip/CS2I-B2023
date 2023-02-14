@@ -1,0 +1,41 @@
+commit 7f7877f5160f734af2966127f11958fe020ff270
+Author: root <root@debian>
+Date:   Tue Feb 14 16:43:53 2023 +0100
+
+    Ajout des fichiers htaccess et htpasswd
+
+commit 050185f244a644e0f7d0fb377db5b7ad9b56f968
+Author: root <root@debian>
+Date:   Tue Feb 14 15:39:22 2023 +0100
+
+    Suppression de wp-config.php
+
+commit 042f8c53c2768ec5ecd242ecd172d1327efaf25d
+Author: root <root@debian>
+Date:   Tue Feb 14 15:25:51 2023 +0100
+
+    Ajout du fichier wp-config.php
+
+commit d3cca954f0d0a5c3783fd7c2b43b2077ff3a19cf
+Author: root <root@debian>
+Date:   Tue Feb 14 14:01:44 2023 +0100
+
+    Mon projet wordpress
+
+commit 0e664bbff248a2b33c609805273c28d65911b22b
+Author: VictorStunting1 <vicmig@outlook.fr>
+Date:   Tue Feb 14 12:03:07 2023 +0100
+
+    test de commit Victor
+
+commit 7510cf9bd5da8f74099d47a205ac50b8b50ec5af
+Author: Uneip <55940964+Uneip@users.noreply.github.com>
+Date:   Tue Feb 14 11:03:10 2023 +0100
+
+    Create toto.txt
+
+commit dc1bb7f45362eaf61419a282c660f84f09a06804
+Author: Uneip <55940964+Uneip@users.noreply.github.com>
+Date:   Tue Feb 14 10:50:48 2023 +0100
+
+    Initial commit
