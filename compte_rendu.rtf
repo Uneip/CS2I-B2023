@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green2\blue7;\red135\green91\blue44;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c60392\c43137\c22745;
+\cssrgb\c100000\c100000\c100000\c50196;}
+\paperw11905\paperh16837\margl1133\margr1133\margb1133\margt1133
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \up0 \nosupersub \ulnone Antoine LUTRAT 									B+\
+\
+\pard\pardeftab720\qc\partightenfactor0
+\cf2 \
+Liste des commandes utilis\'e9es pour faire le TP \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 On commence par cr\'e9er la base de donn\'e9es pour wordpress :  (commandes \cf3 Linux\cf2 )\
+\
+	mysql -u root -p\
+\
+	CREATE DATABASE wordpress_db;\
+\
+	GRANT ALL ON wordpress_db.* TO 'wordpress_user'@'localhost' 		IDENTIFIED BY \'91password';\
+\
+	FLUSH PRIVILEGES;\
+\
+	EXIT;\
+	\
+	cd /var/www/html/\
+\
+\
+On t\'e9l\'e9charge le fichier compress\'e9 pour wordpress : (commande \cf3 Linux\cf2 )\
+\
+	curl -O {\field{\*\fldinst{HYPERLINK "https://wordpress.org/latest.tar.gz"}}{\fldrslt \ul https://wordpress.org/latest.tar.gz}}\
+\
+Et d\'e9compression : (commande \cf3 Linux\cf2 )\
+	\
+	tar -xvf latest.tar.gz\
+\
+Attribution des droits : (commande \cf3 Linux\cf2 )\
+\
+	chown -R www-data:www-data /var/www/html/wordpress\
+\
+	cd wordpress\
+\
+	vi  wp-config-sample\
+\
+Et on modifie certains param\'e8tres dans le fichier (le nom de la base de donn\'e9es, de l\'92utilisateur, le mot de passe) \
+\
+On doit ensuite installer tout les modules n\'e9cessaires au bon fonctionnement de wordpress : (commande \cf3 Linux\cf2 )\
+\
+	apt install php libapache2\cf4 \cb5 -\cf2 \cb1 mod\cf4 \cb5 -\cf2 \cb1 php php\cf4 \cb5 -\cf2 \cb1 pear php\cf4 \cb5 -\cf2 \cb1 cgi php\cf4 \cb5 -\cf2 \cb1 common php\cf4 \cb5 -\cf2 \cb1 mbstring php\cf4 \cb5 -\cf2 \cb1 zip php\cf4 \cb5 -\cf2 \cb1 net\cf4 \cb5 -\cf2 \cb1 socket php\cf4 \cb5 -\cf2 \cb1 gd php\cf4 \cb5 -\cf2 \cb1 xml\cf4 \cb5 -\cf2 \cb1 util php\cf4 \cb5 -\cf2 \cb1 gettext php\cf4 \cb5 -\cf2 \cb1 mysql \
+\
+Puis, pour que tout soit pris en compte : (commande \cf3 Linux\cf2 )\
+\
+	systemctl restart apache2\
+\
+On peut maintenant acc\'e9der \'e0 wordpress avec l\'92adresse ip locale suivie de /wordpress, donc pour moi : 192.168.146.129/wordpress\
+\
+Puis on installe git : (commande \cf3 Linux\cf2 )\
+\
+	apt install git\
+\
+On cr\'e9e un dossier : (commande \cf3 Linux\cf2 )\
+\
+	cd ..\
+\
+	cd.. (pour \'eatre dans var/www)\
+	\
+	mkdir entwanne \
+\
+Nous sommes maintenant dans var/www/entwanne, nous allons ici r\'e9cup\'e9rer les fichiers mis sur GitHub : (commande utilisants \cf3 git\cf2 )\
+\
+	git clone {\field{\*\fldinst{HYPERLINK "https://github.com/Uneip/CS2I-B2023.git"}}{\fldrslt \ul https://github.com/Uneip/CS2I-B2023.git}}\
+\
+Puis nous allons dans le projet : (commande \cf3 Linux\cf2 )\
+\
+	cd CS2I-B2023\
+\
+Et nous y mettons notre wordpress : (commande \cf3 Linux\cf2 )\
+\
+	mv /var/www/html/wordpress /var/www/entwanne/CS2I-B2023\
+\
+Nous pouvons maintenant l\'92ajouter : (commande \cf3 git\cf2 )\
+\
+	git add wordpress\
+\
+Puis on commit : (commande \cf3 git\cf2 )\
+\
+	git commit \
+\
+Avant de push, nous devons mettre cette ligne pour pouvoir nous connecter \'e0 GitHub : (commande \cf3 git\cf2 )\
+\
+	git remote set-url origin https://entwanne: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@github.com/Uneip/CS2I-B2023.git\
+\
+Et on peut maintenant ex\'e9cuter la commande suivante : (commande \cf3 git\cf2 )\
+\
+	git push origin entwanne \
+\
+Ca y est, le fichier wordpress est ajout\'e9 et apparait dans ma branche sur GitHub\
+\
+On cr\'e9e ensuite le fichier .htaccess : (commande \cf3 Linux\cf2 )\
+\
+	vi .htaccess\
+\
+Dans lequel nous allons \'e9crire :\
+\
+	AuthType Basic\
+	AuthName "Acc\'e8s prot\'e9g\'e9"\
+	AuthUserFile /usr/home/login/www/.htpasswd\
+	require valid-user\
+\
+Pour faire un fichier de log, nous rajoutons un fichier dans CS2I-B2023 avec cette commande : (commande \cf3 git\cf2 )\
+\
+	git log \'97pretty > fichier_log.txt\
+\
+Puis nous faisons les commandes habituelles : (commande \cf3 git\cf2 )\
+\
+	git add fichier_log.txt\
+\
+	git commit\
+\
+	git push origin entwanne\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
